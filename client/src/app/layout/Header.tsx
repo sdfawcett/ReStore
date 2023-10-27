@@ -1,4 +1,9 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, FormControlLabel, FormGroup, Switch, Toolbar, Typography } from "@mui/material";
+
+interface Props {
+  darkMode: boolean;
+  handleThemeChange: () => void;
+}
 
 export default function Header() {
   return (
@@ -7,6 +12,9 @@ export default function Header() {
          <Typography variant="h6">
             ReStore
          </Typography>
+         <FormGroup>
+          <FormControlLabel control={<Switch defaultChecked />} label="" />
+        </FormGroup>
       </Toolbar>
     </AppBar>
   )
